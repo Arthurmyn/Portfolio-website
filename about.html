@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>About me</title>
 </head>
@@ -17,7 +18,7 @@
                 <a class="nav" href="about.html">About</a>
                 <a class="nav" href="gallery.html">Gallery</a>
                 <a class="nav" href="projects.html">Projects</a>
-                <a class="nav" href="contact.html">contact</a>
+                <a class="nav" href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
@@ -38,6 +39,10 @@
             <div class="content">
                 <div class="hero-about">
                 <h2 class="text-center">Technical Skills</h2>
+                    <div class="skills-wrapper">
+                       <div class="photo">
+                           <img src="img/me.jpg" alt="My photo">
+                       </div>
                    <div class="skills">
                     <h2>HTML - 60%</h2>
                     <div class="progress">
@@ -56,7 +61,7 @@
                         <div class="react"></div>
                     </div>
                    </div>
-                   </div> 
+                   </div>
                 </div>
             </div>
         </section>
@@ -65,22 +70,49 @@
             <div class="container-3">
                 <h2>Education & Experience</h2>
                 <div class="table-titles">
-                    <p class="tab-links" onclick="opentab('experience')">experience</p>
-                    <p class="tab-links" onclick="opentab('education')">education</p>
+                    <p class="tab-links active-link" onclick="opentab('experience')"><i class="fa-solid fa-briefcase"></i> Experience</p>
+
+                    <p class="tab-links" onclick="opentab('education')"><i class="fa-solid fa-graduation-cap"></i>education</p>
                 </div>
                 <div class="table-contents active-table" id="experience">
                     <ul>
-                        <li><span>2024 Summer</span><br>Robotic Teacher at Okushylar Sarayi</li>
-                        <li><span>2023 Summer</span><br>Robotic Teacher at Ntech Academy</li>
-                        <li><span>2025 Winter</span><br>Robotic Teacher at Keme education</li>
+                        <li>
+                            <i class="fa-solid fa-robot"></i>
+                            <span>2024 Summer</span><br>Robotic Teacher at Okushylar Sarayi</li>
+                        <li>
+                            <i class="fa-solid fa-robot"></i>
+                            <span>2023 Summer</span><br>Robotic Teacher at Ntech Academy</li>
+                        <li>
+                            <i class="fa-solid fa-robot"></i>
+                            <span>2025 Winter</span><br>Robotic Teacher at Keme education</li>
                     </ul>
                 </div>
                 <div class="table-contents" id="education">
                     <ul>
-                        <li><span>2024</span><br>Graduated from Private school Abyroi</li>
-                        <li><span>2025 Summer</span><br>Enter to AITU</li>
+                        <li>
+                            <i class="fa-solid fa-school"></i>
+                            <span>2012-2023</span><br>№5 Secondary School in Oral</li>
+                        <li>
+                            <i class="fa-solid fa-user-graduate"></i>
+                            <span>2024</span><br>Graduated from Private school Abyroi</li>
+                        <li>
+                            <i class="fa-solid fa-award"></i>
+                            <span>2025 Summer</span><br>Enter to AITU</li>
                     </ul>
                 </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="content"  style="background-color: rgb(246, 246, 246);">
+                <h2 style="font-size: 35px;">Beyond Coding</h2>
+                <p class="paragraph-last">I love participating in hackathons and working on startup projects
+                    that challenge creativity and problem-solving skills. 
+                    These experiences help me think faster, collaborate effectively, and turn ideas into real products.
+                    
+                    <p class="paragraph-last">I enjoy building innovative solutions that bring
+                     value to people and constantly look for opportunities to grow — whether through teamwork, 
+                     new technologies, or entrepreneurial projects.</p>
             </div>
         </section>
     </main>
@@ -88,5 +120,7 @@
   <p>Author: Artur Jaxygaliyev</p>
   <p><a href="mailto:dzartur34@gmail.com">dzartur34@gmail.com</a></p>
 </footer>
+
+<script src="JavaScript/script.js"></script>
 </body>
 </html>

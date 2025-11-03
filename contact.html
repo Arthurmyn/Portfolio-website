@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/Style/style.css">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
+<header class="header">
+    <div class="container">
+      <h1 class="logo">
+        <a href="index.html">Resume</a>
+      </h1>
+      <nav>
+        <a class="nav" href="index.html">Main</a>
+        <a class="nav" href="about.html">About</a>
+        <a class="nav" href="gallery.html">Gallery</a>
+        <a class="nav" href="projects.html">Projects</a>
+        <a class="nav" href="contact.html">Contact</a>
+      </nav>
+      </div>
+</header>
+
+<main>
+    <section class="contact" style="background-color: #e4e4e468;">
+        <div class="content-contact">
+            <div class="hero">
+                <h1><b>Get in Touch</b></h1>
+                    <p class="paragraph">Have a project in mind? Feel free to reach out!</p>
+            </div>
+        </div>
+    </section>
+        <section>
+            <div class="container-contact">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p class="contact-p">I'm always interested in hearing about new projects and opportunities.</p>
+                
+                <h3><i class="fa-solid fa-envelope"></i> Email</h3>
+                <a class="contact-links" href="mailto:dzartur34@gmail.com">dzartur34@gmail.com</a>
+                <h3><i class="fa-brands fa-github"></i> GitHub</h3>
+                <a class="contact-links" href="https://github.com/Arthurmyn" target="_blank">github.com/Arthurmyn</a>
+
+                <h3><i class="fa-brands fa-linkedin"></i> LinkedIn</h3>
+                <a class="contact-links" href="https://linkedin.com/in/Arthurmyn" target="_blank">linkedin.com/Artur Jaxygaliyev</a>
+            </div>  
+            <div class="form">
+                <form id = "form" class="needs-validation" novalidate>
+                    <div class="input-control" >
+                    <label for="name">Name *</label>
+                        <input type="text" placeholder="Your name" id = "name" name="name" required> 
+                        </div>
+                     <div class="input-control">
+                        <label for="email">Email *</label>
+                        <input type="email" placeholder="Your Email" id = "email" name="email" required>
+                        </div>
+
+                     <div class="input-control">
+                        <label for="message">Message *</label>
+                        <textarea placeholder="Tell me about your project..." id = "message" name="message" required></textarea>
+                        </div>
+                        <button class="submit" type="submit">Send Message</button>
+                </form>
+            </div>
+            </div>
+        </section>
+        </main>
+    <footer>
+  <p>Author: Artur Jaxygaliyev</p>
+  <p><a href="mailto:dzartur34@gmail.com">dzartur34@gmail.com</a></p>
+</footer>
+
+<script src="contact.js"></script>
 </body>
 </html>
