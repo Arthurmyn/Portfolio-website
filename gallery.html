@@ -108,7 +108,6 @@
       color: #fff;
     }
 
-    /* === Fade-up Animation === */
     .fade-up {
       opacity: 0;
       transform: translateY(40px);
@@ -271,7 +270,6 @@
         </p>
 
         <div class="row g-4 justify-content-center">
-          <!-- Fade-up effect added -->
           <div class="col-md-6 col-lg-5 fade-up">
             <div class="card certificate-card p-4 h-100">
               <div class="d-flex justify-content-between align-items-start mb-2">
@@ -290,7 +288,6 @@
             </div>
           </div>
 
-          <!-- Fade-up effect added -->
           <div class="col-md-6 col-lg-5 fade-up">
             <div class="card certificate-card p-4 h-100">
               <div class="d-flex justify-content-between align-items-start mb-2">
@@ -322,7 +319,6 @@
         </p>
 
         <div class="row g-4 justify-content-center">
-          <!-- Fade-up effect added -->
           <div class="col-md-4 fade-up">
             <div class="card award-card p-4 text-center h-100">
               <div class="award-icon"><i class="fa-solid fa-trophy"></i></div>
@@ -332,7 +328,6 @@
             </div>
           </div>
 
-          <!-- Fade-up effect added -->
           <div class="col-md-4 fade-up">
             <div class="card award-card p-4 text-center h-100">
               <div class="award-icon"><i class="fa-regular fa-star"></i></div>
@@ -387,8 +382,7 @@
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
         }
-      });
-    }, { threshold: 0.2 });
+      }); }, { threshold: 0.2 });
 
     fadeElems.forEach(el => observer.observe(el));
   </script>
