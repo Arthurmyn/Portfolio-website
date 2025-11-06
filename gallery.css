@@ -2,150 +2,169 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
-html, body {
+html,body {
   height: 100%;
-  background-color: #F3F7FB;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  background-color: #f3f7fb;
 }
 
-.header {
+header {
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
   height: 60px;
-  background-color: #0D47A1;
-  color: white;
+  background-color: rgb(13, 71, 161);
+  color: #ffffff;
+  z-index: 1000;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  height: 100%;
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
+  padding: 0 20px;
 }
 
-.logo a {
-  color: white;
-  font-size: 28px;
-  font-weight: 700;
-  text-decoration: none;
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 600;
+  height: 60px;
 }
 
-.container nav {
+.header-container nav {
   display: flex;
   gap: 20px;
 }
 
-.container a {
+.header-container a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 400;
+  transition: color 0.2s ease;
 }
 
-.container a:hover {
-  color: #90CAF9;
+.header-container a:hover {
+  color: #90caf9;
 }
 
-.gallery-1 {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding: 140px 20px 80px;
+main {
+  flex: 1;
+  padding-top: 70px;
+  background-color: #f3f7fb;
+}
+
+.footer {
   background-color: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 50px 0 20px;
+  color: #1b1f23;
+  text-align: center;
 }
 
-.hero h1 {
-  font-size: 60px;
-  font-weight: 350;
-  color: #000000;
-}
-
-.paragraph {
-  max-width: 700px;
-  margin: 15px auto 0;
-  font-size: 18px;
-  color: #5c5b5b;
-}
-
-.gallery-section {
-  max-width: 1200px;
-  margin: 0 auto 80px;
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 0 20px;
-  text-align: center;
+  text-align: left;
 }
 
-.gallery-title {
-  font-size: 45px;
-  color: #0B3D91;
-  margin: 30px 0 20px;
-  font-weight: 500;
+.footer-column {
+  flex: 1 1 250px;
+  margin-bottom: 20px;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 20px;
-  justify-items: center;
+.footer-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0d47a1;
+  margin-bottom: 10px;
 }
 
-.gallery img {
-  width: 100%;
-  height: 250px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(6, 6, 6, 0.398);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.footer-column h4 {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #0d47a1;
 }
 
-.gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+.footer-column p {
+  color: #5b6b7a;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-
-footer {
-  background-color: #0B3D91;
-  color: #ffffff;
-  text-align: center;
-  padding: 15px 0;
-  font-size: 0.9rem;
+.footer-column ul {
+  list-style: none;
+  padding: 0;
 }
 
-footer p {
-  font-weight: 200;
-  font-size: 15px;
+.footer-column ul li {
+  margin-bottom: 8px;
 }
 
-footer a {
-  color: white;
+.footer-column ul li a {
+  color: #5b6b7a;
   text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
 }
 
-footer a:hover {
-  text-decoration: underline;
+.footer-column ul li a:hover {
+  color: #0d47a1;
 }
 
+.social-links {
+  display: flex;
+  gap: 14px;
+}
+
+.social-links a {
+  color: #1b1f23;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #0d47a1;
+}
+
+.footer hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 30px auto 15px;
+  max-width: 1000px;
+}
+
+.footer-bottom {
+  font-size: 13px;
+  color: #5b6b7a;
+}
 
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 36px;
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
   }
 
-  .paragraph {
-    font-size: 16px;
-    padding: 0 10px;
+  .footer-column {
+    text-align: center;
   }
 
-  .gallery img {
-    height: 200px;
+  .social-links {
+    justify-content: center;
   }
 }

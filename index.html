@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Portfolio Page</title>
 </head>
@@ -13,12 +14,12 @@
   <header class="header">
     <div class="container">
       <h1 class="logo">
-        <a href="index.html">Resume</a>
+        <a href="index.html">Portfolio</a>
       </h1>
       <nav>
         <a class="nav" href="index.html">Main</a>
         <a class="nav" href="about.html">About</a>
-        <a class="nav" href="gallery.html">Gallery</a>
+        <a class="nav" href="gallery.html">Achievements</a>
         <a class="nav" href="projects.html">Projects</a>
         <a class="nav" href="contact.html">Contact</a>
       </nav>
@@ -26,7 +27,7 @@
   </header>
 
   <main>
-      <section>
+      <section id="first">
         <div class="content">
           <div class="hero">
           <h1>Hi, i'm <span style="color:rgb(0, 0, 151)">Artur Jaxygaliyev</span></h1>
@@ -39,10 +40,69 @@
           </div>
         </div>
       </section>
+
+
+        <section class="services">
+            <div class="services-head">
+                <h2 class="section-title">What I Do</h2>
+                <p class="section-sub">Specialized in building exceptional digital experiences</p>
+            </div>
+
+            <div class="services-grid">
+                <article class="service">
+                <span class="service-icon"><i class="fa-solid fa-code"></i></span>
+                <h3 class="service-title">Web Development</h3>
+                <p class="service-text">
+                    Responsive and performant web apps using HTML, CSS, JavaScript.
+                </p>
+                </article>
+
+                <article class="service">
+                <span class="service-icon"><i class="fa-solid fa-palette"></i></span>
+                <h3 class="service-title">UI/UX Design</h3>
+                <p class="service-text">
+                    Clean, intuitive interfaces with focus on usability and accessibility.
+                </p>
+                </article>
+
+                <article class="service">
+                <span class="service-icon"><i class="fa-solid fa-rocket"></i></span>
+                <h3 class="service-title">Deployment & Optimization</h3>
+                <p class="service-text">
+                    CI/CD, image optimization, caching, Lighthouse improvements.
+                </p>
+                </article>
+            </div>
+            </section>
+
 </main>
-<footer>
-  <p>Author: Artur Jaxygaliyev</p>
-  <p><a href="mailto:dzartur34@gmail.com">dzartur34@gmail.com</a></p>
-</footer>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3 class="footer-logo">Portfolio</h3>
+      <p>Building beautiful and functional web experiences.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Connect</h4>
+      <div class="social-links">
+        <a href="https://github.com/Arthurmyn"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/Arthurmyn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto: dzartur34@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <p class="footer-bottom">© 2025 Portfolio. All rights reserved.</p>
 </body>
 </html>

@@ -13,3 +13,35 @@ function opentab(tabname) {
   event.currentTarget.classList.add("active-link");
   document.getElementById(tabname).classList.add("active-table");
 }
+
+
+const skillsSection = document.querySelector('.skills');
+
+skillsSection.addEventListener('mouseover', () => {
+  document.querySelector('.html').style.width = '60%';
+  document.querySelector('.css').style.width = '50%';
+  document.querySelector('.js').style.width = '20%';
+  document.querySelector('.react').style.width = '5%';
+});
+
+skillsSection.addEventListener('mouseleave', () => {
+  document.querySelector('.html').style.width = '0%';
+  document.querySelector('.css').style.width = '0%';
+  document.querySelector('.js').style.width = '0%';
+  document.querySelector('.react').style.width = '0%';
+});
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+
+function revealOnScroll() {
+  const elements = document.querySelectorAll('.fade-up');
+  const triggerBottom = window.innerHeight * 0.85;
+
+  elements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < triggerBottom) {
+      el.classList.add('show');
+    }
+  });
+}
