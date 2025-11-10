@@ -30,3 +30,9 @@ skillsSection.addEventListener('mouseleave', () => {
   document.querySelector('.js').style.width = '0%';
   document.querySelector('.react').style.width = '0%';
 });
+
+let visits = localStorage.getItem('visits');
+visits++;
+
+localStorage.setItem('visits', visits);
+console.log(`You have visited this page ${visits} times`);

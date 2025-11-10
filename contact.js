@@ -1,56 +1,49 @@
 (() => {
   const form = document.getElementById('form');
-  const controls = form.querySelectorAll('.input-control');
+  const fields = form.querySelectorAll('input, textarea');
+  const status = document.getElementById('formStatus');
 
-  function setInvalid(control, message) {
-    control.classList.add('invalid');
-    const fb = control.querySelector('.invalid-feedback');
-    if (fb) fb.textContent = message;
-  }
+  form.setAttribute('novalidate', '');
 
-  function clearInvalid(control) {
-    control.classList.remove('invalid');
-  }
+  fields.forEach(el => {
+    const saved = localStorage.getItem(`contactForm_${el.name}`);
+    if (saved) el.value = saved;
 
-  function validate() {
-    let ok = true;
-
-    controls.forEach(control => {
-      clearInvalid(control);
-      const input = control.querySelector('input, textarea');
-      if (!input) return;
-
-      if (!input.checkValidity()) {
-        ok = false;
-        if (input.validity.valueMissing) {
-          setInvalid(control, 'This field is required.');
-        } else if (input.type === 'email' && input.validity.typeMismatch) {
-          setInvalid(control, 'Enter a valid email.');
-        } else if (input.validity.tooShort) {
-          setInvalid(control, `At least ${input.minLength} characters required.`);
-        } else {
-          setInvalid(control, 'Please fix this field.');
-        }
-      }
+    el.addEventListener('input', () => {
+      el.classList.toggle('is-invalid', !el.checkValidity());
+      localStorage.setItem(`contactForm_${el.name}`, el.value);
     });
-
-    return ok;
-  }
-
-  form.addEventListener('input', e => {
-    const control = e.target.closest('.input-control');
-    if (control) {
-      if (e.target.checkValidity()) clearInvalid(control);
-    }
   });
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const ok = validate();
-    if (!ok) return;
 
-    document.getElementById('formStatus').hidden = false;
-    form.reset();
-    controls.forEach(clearInvalid);
+    if (!form.checkValidity()) {
+      fields.forEach(el => el.classList.toggle('is-invalid', !el.checkValidity()));
+      return;
+    }
+
+    status.hidden = false;
+    status.textContent = 'Sending...';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+
+      if (res.ok) {
+        fields.forEach(el => localStorage.removeItem(`contactForm_${el.name}`));
+        status.textContent = 'Sent! I’ll get back to you soon.';
+        form.reset();
+      } else {
+        status.textContent = 'Error sending form.';
+      }
+    } catch {
+      status.textContent = 'Network error. Try again.';
+    } finally {
+      setTimeout(() => (status.hidden = true), 4000);
+    }
   });
 })();

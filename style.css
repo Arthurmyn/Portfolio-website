@@ -4,7 +4,6 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
-
 html, body {
   height: 100%;
 }
@@ -629,3 +628,10 @@ button:hover {
     padding: 16px;
   }
 }
+
+.hero h1 {
+  font-weight: 700;
+}
+ .vmw, .git {
+  border-radius: 8px;
+ }
