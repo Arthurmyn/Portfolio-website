@@ -23,7 +23,6 @@
       });
 
       if (res.ok) {
-        fields.forEach(el => localStorage.removeItem(`contactForm_${el.name}`));
         status.textContent = 'Sent! I will get back to you soon.';
         form.reset();
       } else {
@@ -31,8 +30,6 @@
       }
     } catch {
       status.textContent = 'Network error. Try again.';
-    } finally {
-      setTimeout(() => (status.hidden = true), 4000);
     }
   });
 })();
