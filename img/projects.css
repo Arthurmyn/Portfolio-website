@@ -57,6 +57,13 @@ header {
   color: #90CAF9;
 }
 
+.photo-card {
+  width: 300px;
+  height: 400px;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
