@@ -105,6 +105,7 @@ button {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  
 }
 
 #first {
@@ -581,6 +582,9 @@ button:hover {
     align-items: center;
     padding: 10px 0;
   }
+  .vmw, .git {
+    font-size: 11px;
+  }
 
   .logo {
     font-size: 22px;
@@ -621,7 +625,7 @@ button:hover {
   button {
     width: 120px;
     height: 44px;
-    font-size: 14px;
+    font-size: 10px;
   }
 
   .service {
